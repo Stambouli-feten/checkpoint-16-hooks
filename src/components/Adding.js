@@ -12,8 +12,10 @@ function Adding(props) {
     image: "",
   });
   function handleadd() {
-    props.add([...props.list, newmovie]);
+    const updatedList = [...props.list, newmovie];
+    props.add(updatedList);
     handleClose();
+    props.setUpdatedList(updatedList);
   }
   function handlechange(e) {
     setNewmovie({ ...newmovie, [e.target.id]: e.target.value });
@@ -28,7 +30,7 @@ function Adding(props) {
         <Button variant="primary" onClick={handleShow}>
           add Movie
         </Button>
-        {console.log(newmovie)}
+        {/* {console.log(newmovie)} */}
         <Modal show={show} onHide={handleClose}>
           <Modal.Header closeButton>
             <Modal.Title>Adding Movie</Modal.Title>
