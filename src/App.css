@@ -41,3 +41,11 @@
   justify-content: space-around;
   flex-wrap: wrap;
 }
+.acceuil {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+.description {
+  font-size: large;
+  margin-bottom: 50px;
+}
